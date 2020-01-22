@@ -1,0 +1,34 @@
+#第一题
+all_data = [] 
+info = []
+
+for i in range(1,13):
+    info.append(build_url('hangzhou',2019,i))
+    
+for i in range(1,13):
+    all_data.append(parse(info[i-1],'hangzhou'))
+
+print(all_data)
+
+#第二题
+
+def print_string(*content,val= ' ', end = '\n',):
+    print(val.join(content), end,sep='')
+    
+print_string( 'This', 'is', 'a', 'test',val='-',end='.')
+
+#第三题
+num=[1,1]
+def FIB(n):
+    if n<3:
+        print('错误，请输入大于3的正整数。')
+        
+    else:
+        for i in range(3,n+1):                        
+            num.append(num[i-3]+num[i-2])                       
+        print(num)
+
+print('请输入一个大于3的整数：')
+count=int(input())
+FIB(count)
+        
